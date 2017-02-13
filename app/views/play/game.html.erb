@@ -1,0 +1,12 @@
+<h1>Play#game</h1>
+<p>Find me in app/views/play/game.html.erb</p>
+
+<%= @array %>
+
+<form action="/score">
+  <label for="question">What is your word?</label>
+  <input type="text" id="attempt" name="attempt" placeholder="Your solution here">
+  <input type="hidden" id="grid" name="grid" value="<%= @array.join %>">
+  <input type="hidden" id="start_time" name="start_time" value="<%= @start_time %>">
+  <input type="submit" value="Go on!">
+</form>
